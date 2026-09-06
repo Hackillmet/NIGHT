@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NIGHT 01™ — Collection</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<script src="product-images.js"></script>
+</head>
+<body>
+
+<div class="noise"></div>
+<div class="mountains"></div>
+
+<!-- ===================== PRELOADER ===================== -->
+<div class="preloader" id="preloader"><span>NIGHT</span></div>
+
+<!-- ===================== HEADER ===================== -->
+<header id="header">
+  <div class="logo">NIGHT</div>
+
+  <nav id="nav">
+    <a class="active" data-scroll href="#home">COLLECTION</a>
+    <a data-scroll href="#about">ABOUT</a>
+    <a data-scroll href="#shop">SHOP</a>
+    <a data-scroll href="#lookbook">LOOKBOOK</a>
+    <a data-scroll href="#contact">CONTACT</a>
+  </nav>
+
+  <div class="header-icons">
+    <button class="icon-search" id="searchBtn" aria-label="Поиск">🔍</button>
+    <button class="icon-user" id="wishlistBtn" aria-label="Избранное">
+      ♥ <span class="badge" id="wishCount">0</span>
+    </button>
+    <button class="icon-cart" id="cartBtn" aria-label="Корзина">
+      🛒 <span class="badge" id="cartCount">0</span>
+    </button>
+    <button class="burger" id="burgerBtn" aria-label="Меню"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a data-scroll href="#home">COLLECTION</a>
+  <a data-scroll href="#about">ABOUT</a>
+  <a data-scroll href="#shop">SHOP</a>
+  <a data-scroll href="#lookbook">LOOKBOOK</a>
+  <a data-scroll href="#contact">CONTACT</a>
+</div>
+
+<!-- ===================== TICKER ===================== -->
+<div class="ticker">
+  <div class="ticker-track">
+    <span>FOR THOSE WHO CLIMB, NOT FOR THE CROWD — NIGHT 01™ — LIMITED DROP — FOR THOSE WHO CLIMB, NOT FOR THE CROWD — NIGHT 01™ — LIMITED DROP —</span>
+    <span>FOR THOSE WHO CLIMB, NOT FOR THE CROWD — NIGHT 01™ — LIMITED DROP — FOR THOSE WHO CLIMB, NOT FOR THE CROWD — NIGHT 01™ — LIMITED DROP —</span>
+  </div>
+</div>
+
+<main>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="home">
+
+  <div class="hero-left">
+    <span class="subtitle">NEW DROP</span>
+    <h1>COLLECTION<br>NIGHT 01™</h1>
+    <p>Your path, your goals, is something that should not stop you. Move forward until you succeed.</p>
+    <a href="#shop" data-scroll class="btn">SHOP NOW →</a>
+  </div>
+
+  <div class="hero-center">
+    <div class="ink"></div>
+    <div class="main-shirt-wrap" id="heroShirtWrap">
+      <img class="main-shirt-photo" id="heroShirtImg" alt="NIGHT Path Tee">
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="socials">
+      <a href="#">IG</a>
+      <a href="#">YT</a>
+      <a href="#">TT</a>
+    </div>
+  </div>
+
+</section>
+
+<!-- ===================== STATS STRIP ===================== -->
+<section class="stats-strip">
+  <div class="stat-item"><h3>500+</h3><p>CLIMBERS WORLDWIDE</p></div>
+  <div class="stat-item"><h3>01</h3><p>CURRENT DROP</p></div>
+  <div class="stat-item"><h3>260g</h3><p>FABRIC WEIGHT</p></div>
+  <div class="stat-item"><h3>2026</h3><p>FOUNDED</p></div>
+</section>
+
+<!-- shared shirt shape -->
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <g id="tee-shape">
+      <path d="M120 40 L40 90 L75 150 L110 125 L110 420 Q110 440 130 440 L270 440 Q290 440 290 420 L290 125 L325 150 L360 90 L280 40 Q260 65 200 65 Q140 65 120 40 Z"
+        fill="currentColor" stroke="rgba(0,0,0,.3)" stroke-width="3"/>
+      <path d="M120 40 L40 90 L75 150 L110 125" fill="none" stroke="rgba(0,0,0,.2)" stroke-width="2"/>
+      <path d="M280 40 L360 90 L325 150 L290 125" fill="none" stroke="rgba(0,0,0,.2)" stroke-width="2"/>
+      <path d="M155 45 Q200 90 245 45" fill="none" stroke="rgba(0,0,0,.3)" stroke-width="3"/>
+    </g>
+  </defs>
+</svg>
+
+<!-- ===================== SIDEBAR ===================== -->
+<aside class="sidebar" id="sidebar">
+
+  <div class="sidebar-header">
+    <span>NEW DROP</span>
+    <h3>COLLECTION<br>NIGHT 01™</h3>
+    <p>Move forward until you succeed.</p>
+    <a href="#shop" data-scroll class="btn-small">SHOP NOW</a>
+  </div>
+
+  <div class="sidebar-product" id="sidebarFeatured"></div>
+
+  <div class="sidebar-list" id="sidebarList"></div>
+
+</aside>
+
+<!-- ===================== ABOUT ===================== -->
+<section class="about" id="about">
+  <div class="about-text">
+    <span class="subtitle">OUR STORY</span>
+    <h2>MADE FOR<br>THE ASCENT</h2>
+    <p>NIGHT родился из идеи, что одежда должна двигаться вместе с тобой — в город, в горы, в ночь.
+      Плотные ткани, честный крой, минимум лишнего.</p>
+    <p>Каждый дроп выходит небольшим тиражом — без переизбытка, без компромиссов в качестве.</p>
+  </div>
+</section>
+
+<!-- ===================== PRODUCTS ===================== -->
+<section class="products" id="shop">
+
+  <div class="section-head">
+    <h2>NEW COLLECTION</h2>
+    <div class="products-controls">
+      <select id="sortSelect">
+        <option value="default">Sort: Default</option>
+        <option value="price-asc">Price: Low to High</option>
+        <option value="price-desc">Price: High to Low</option>
+        <option value="name">Name A–Z</option>
+      </select>
+      <button class="filter-btn" id="filterToggle">FILTERS</button>
+    </div>
+  </div>
+
+  <div class="filters" id="colorFilters">
+    <span class="filters-label">COLOR</span>
+    <button class="color-filter active" data-color="all">ALL</button>
+    <button class="color-filter" data-color="#0a0a0a" title="Black"></button>
+    <button class="color-filter" data-color="#f5f5f5" title="White"></button>
+    <button class="color-filter" data-color="#2b2b2b" title="Charcoal"></button>
+    <button class="color-filter" data-color="#8a8a8a" title="Stone"></button>
+  </div>
+
+  <div class="product-grid" id="productGrid"></div>
+
+  <div class="catalog-empty" id="catalogEmpty" style="display:none">
+    <p>Ничего не найдено под этот фильтр.</p>
+    <button class="btn-small" id="resetFilters">СБРОСИТЬ ФИЛЬТРЫ</button>
+  </div>
+
+</section>
+
+<!-- ===================== FEATURES ===================== -->
+<section class="features">
+  <div class="features-head">
+    <span class="subtitle">WHY NIGHT</span>
+    <h2>BUILT FOR<br>THE CLIMB</h2>
+  </div>
+  <div class="features-grid">
+    <div class="feature">
+      <span class="feature-num">01</span>
+      <h4>PREMIUM QUALITY</h4>
+      <p>Heavyweight fabrics built for comfort, made to move with you mile after mile.</p>
+    </div>
+    <div class="feature">
+      <span class="feature-num">02</span>
+      <h4>EXCLUSIVE DESIGNS</h4>
+      <p>Unique prints and cuts that speak for themselves — no reprints, no repeats.</p>
+    </div>
+    <div class="feature">
+      <span class="feature-num">03</span>
+      <h4>LIMITED DROPS</h4>
+      <p>Small batches, released in numbered drops. Maximum exclusivity, zero excess.</p>
+    </div>
+    <div class="feature">
+      <span class="feature-num">04</span>
+      <h4>MADE TO LAST</h4>
+      <p>Timeless pieces built for those who keep moving forward, season after season.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TESTIMONIALS ===================== -->
+<section class="testimonials" id="reviews">
+  <span class="subtitle" style="text-align:center;display:block">REVIEWS</span>
+  <h2 class="testimonials-title">FROM THE COMMUNITY</h2>
+  <div class="testimonials-grid">
+    <div class="testi-card">
+      <div class="stars">★★★★★</div>
+      <p>[Плейсхолдер] Впиши сюда настоящий отзыв клиента — про качество ткани, посадку и ощущения от вещи.</p>
+      <div class="testi-author">
+        <span class="testi-avatar">A</span>
+        <div><h5>Имя Фамилия</h5><span>Покупатель · DROP 01</span></div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="stars">★★★★★</div>
+      <p>[Плейсхолдер] Ещё один отзыв — например, про быструю доставку или про то, как вещь смотрится вживую.</p>
+      <div class="testi-author">
+        <span class="testi-avatar">B</span>
+        <div><h5>Имя Фамилия</h5><span>Покупатель · DROP 01</span></div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="stars">★★★★★</div>
+      <p>[Плейсхолдер] Третий отзыв — можно про размер, крой или то, почему вернулись за вторым дропом.</p>
+      <div class="testi-author">
+        <span class="testi-avatar">C</span>
+        <div><h5>Имя Фамилия</h5><span>Покупатель · DROP 01</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LOOKBOOK ===================== -->
+<section class="lookbook" id="lookbook">
+  <span class="subtitle" style="text-align:center;display:block">LOOKBOOK</span>
+  <h2 class="lookbook-title">FIELD NOTES</h2>
+  <div class="lookbook-grid">
+    <div class="look-card look-1"><span>NIGHT 01</span></div>
+    <div class="look-card look-2"><span>ASCENT</span></div>
+    <div class="look-card look-3"><span>SUMMIT</span></div>
+    <div class="look-card look-4"><span>RIDGE</span></div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="faq" id="faq">
+  <span class="subtitle" style="text-align:center;display:block">FAQ</span>
+  <h2 class="faq-title">ЧАСТЫЕ ВОПРОСЫ</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-question">Как подобрать размер? <span class="faq-icon">+</span></button>
+      <div class="faq-answer"><p>[Плейсхолдер] Впиши сюда таблицу размеров и рекомендации по посадке для своих моделей.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Сколько идёт доставка? <span class="faq-icon">+</span></button>
+      <div class="faq-answer"><p>[Плейсхолдер] Укажи сроки доставки по регионам и стоимость.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Можно ли вернуть товар? <span class="faq-icon">+</span></button>
+      <div class="faq-answer"><p>[Плейсхолдер] Опиши условия возврата и обмена.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Как часто выходят новые дропы? <span class="faq-icon">+</span></button>
+      <div class="faq-answer"><p>[Плейсхолдер] Расскажи про частоту дропов и как о них узнавать первым.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Как ухаживать за вещами NIGHT? <span class="faq-icon">+</span></button>
+      <div class="faq-answer"><p>[Плейсхолдер] Добавь рекомендации по стирке и уходу за тканью.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== NEWSLETTER ===================== -->
+<section class="newsletter" id="contact">
+  <span class="subtitle">STAY IN THE LOOP</span>
+  <h2>JOIN THE<br>NIGHT LIST</h2>
+  <p>Get early access to future drops and 10% off your first order.</p>
+  <form class="newsletter-form" id="newsletterForm">
+    <input type="email" id="newsletterEmail" placeholder="Your email" required>
+    <button type="submit" class="btn">SUBSCRIBE</button>
+  </form>
+  <p class="newsletter-msg" id="newsletterMsg"></p>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="footer-left">
+    <h4>ESTD. 2026</h4>
+    <p>Your path should never stop.<br>Keep moving forward.</p>
+    <div class="footer-socials">
+      <a href="#">IG</a>
+      <a href="#">YT</a>
+      <a href="#">TT</a>
+    </div>
+  </div>
+  <div class="footer-links">
+    <h5>SHOP</h5>
+    <ul>
+      <li><a data-scroll href="#home">Collection</a></li>
+      <li><a data-scroll href="#about">About</a></li>
+      <li><a data-scroll href="#shop">Shop</a></li>
+      <li><a data-scroll href="#lookbook">Lookbook</a></li>
+    </ul>
+  </div>
+  <div class="footer-links">
+    <h5>HELP</h5>
+    <ul>
+      <li><a data-scroll href="#reviews">Reviews</a></li>
+      <li><a data-scroll href="#faq">FAQ</a></li>
+      <li><a data-scroll href="#contact">Contact</a></li>
+    </ul>
+  </div>
+  <div class="footer-center">
+    <h2>NIGHT</h2>
+    <div class="barcode"></div>
+  </div>
+  <div class="footer-bottom">
+    <p>© <span class="year"></span> NIGHT. All rights reserved.</p>
+    <button class="top-btn" id="topBtn">TOP ↑</button>
+  </div>
+</footer>
+
+</main>
+
+<!-- ===================== CART DRAWER ===================== -->
+<div class="overlay" id="overlay"></div>
+
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="drawer-head">
+    <h3>CART</h3>
+    <button class="close-btn" id="closeCart">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <p class="drawer-empty" id="cartEmpty">Your cart is empty.</p>
+  </div>
+  <div class="cart-footer" id="cartFooter" style="display:none">
+    <div class="cart-total"><span>Total</span><strong id="cartTotal">$0</strong></div>
+    <button class="btn full" id="checkoutBtn">CHECKOUT</button>
+  </div>
+</aside>
+
+<!-- ===================== WISHLIST DRAWER ===================== -->
+<aside class="cart-drawer wishlist-drawer" id="wishlistDrawer">
+  <div class="drawer-head">
+    <h3>WISHLIST</h3>
+    <button class="close-btn" id="closeWishlist">✕</button>
+  </div>
+  <div class="cart-items" id="wishlistItems">
+    <p class="drawer-empty" id="wishlistEmpty">No favorites yet.</p>
+  </div>
+</aside>
+
+<!-- ===================== QUICK VIEW MODAL ===================== -->
+<div class="modal" id="quickView">
+  <div class="modal-box product-modal">
+    <button class="close-btn" id="closeQuickView">✕</button>
+    <div class="product-modal-body" id="quickViewBody"></div>
+  </div>
+</div>
+
+<!-- ===================== CHECKOUT MODAL ===================== -->
+<div class="modal" id="checkoutModal">
+  <div class="modal-box">
+    <button class="close-btn" id="closeCheckout">✕</button>
+    <div id="checkoutStep1">
+      <h3>CHECKOUT</h3>
+      <form id="checkoutForm">
+        <label>Full name<input type="text" id="ckName" required placeholder="Jane Doe"></label>
+        <label>Phone<input type="tel" id="ckPhone" required placeholder="+7 (___) ___-__-__"></label>
+        <label>Shipping address<input type="text" id="ckAddress" required placeholder="City, street, house"></label>
+        <label>Payment
+          <select id="ckPayment">
+            <option>Card online</option>
+            <option>Cash on delivery</option>
+            <option>SBP</option>
+          </select>
+        </label>
+        <div class="checkout-total"><span>Total</span><strong id="checkoutTotal">$0</strong></div>
+        <button type="submit" class="btn full">CONFIRM ORDER</button>
+      </form>
+    </div>
+    <div id="checkoutStep2" style="display:none">
+      <div class="success-icon">✔</div>
+      <h3>ORDER PLACED</h3>
+      <p id="successText">We'll text you once it ships.</p>
+      <button class="btn-small full" id="closeSuccess">CONTINUE SHOPPING</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== SEARCH OVERLAY ===================== -->
+<div class="search-overlay" id="searchOverlay">
+  <button class="close-btn" id="closeSearch">✕</button>
+  <input type="text" id="searchInput" placeholder="Search the drop...">
+  <div class="search-results" id="searchResults"></div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
